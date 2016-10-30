@@ -35,7 +35,29 @@ public class Game {
     }
 
     public int getAdjacentMove(int current){
+        Random rand = new Random();
+        int list[3] = {-1,0,1};
         int next = 0;
+        int x = (current-1)/3;
+        int y=  (current-1)%3;
+
+;
+        while (next==0 || next>9 || next<1 || next ==current){
+            int random = rand.nextInt(3);
+            int random2 = rand.nextInt(3);
+            x = x + list[random];
+            y = y + list[random2];
+            next = x*3 + y+1;
+
+        }
+
+
+
+
+
+
+
+
         return next;
     }
 
